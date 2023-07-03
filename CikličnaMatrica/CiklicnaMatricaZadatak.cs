@@ -1,5 +1,4 @@
 ﻿// Prvi korak
-using System.Collections.Concurrent;
 
 int stupaca, redaka;
 Console.Write("Unesite broj stupaca");
@@ -31,7 +30,7 @@ for(int i =1; i<=stupaca; i++)
     matrica[redaka - 1, stupaca - i] = a++;
 }
 
-for(int i =0; i<stupaca; i++)
+for(int i =0; i<stupaca; i++)  // Provjera
 {
     for(int j =0; j<redaka; j++)
     {
@@ -48,9 +47,45 @@ for (int i = redaka-2; i>=0; i--)
     matrica[i, 0] = a++;
 }
 
-for(int i =0; i<stupaca; i++)
+for(int i =0; i<stupaca; i++)   // Provjera
 {
     for(int j =0; j < redaka; j++)
+    {
+        Console.Write(matrica[i,j]+" ");
+    }
+    Console.WriteLine();
+}
+
+Console.WriteLine("***************************");
+
+// Četvrti korak
+
+for (int i = 0; i <= stupaca -1; i++)
+{
+    matrica[0, i] = a++;
+}
+
+for (int i = 0; i<stupaca; i++)  // Provjera
+{
+    for(int j =0; j<redaka; j++)
+    {
+        Console.Write(matrica[i,j]+" ");
+    }
+    Console.WriteLine();
+}
+
+Console.WriteLine("***************************");
+
+// Peti korak
+
+for(int i =0; i<=redaka; i++)
+{
+    matrica[i,stupaca-1] = a++;
+}
+
+for(int i = 0; i<stupaca; i++)  // Provjera
+{
+    for (int j =0; j<redaka; j++)
     {
         Console.Write(matrica[i,j]+" ");
     }
