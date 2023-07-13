@@ -1,0 +1,5 @@
+C:\Users\Domagoj\Documents\GitHub\EdunovaWP1\Csharp\Console08\LjetniRad\obj\Debug\net6.0\LjetniRad.csproj.AssemblyReference.cache
+C:\Users\Domagoj\Documents\GitHub\EdunovaWP1\Csharp\Console08\LjetniRad\obj\Debug\net6.0\LjetniRad.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Domagoj\Documents\GitHub\EdunovaWP1\Csharp\Console08\LjetniRad\obj\Debug\net6.0\LjetniRad.AssemblyInfoInputs.cache
+C:\Users\Domagoj\Documents\GitHub\EdunovaWP1\Csharp\Console08\LjetniRad\obj\Debug\net6.0\LjetniRad.AssemblyInfo.cs
+C:\Users\Domagoj\Documents\GitHub\EdunovaWP1\Csharp\Console08\LjetniRad\obj\Debug\net6.0\LjetniRad.csproj.CoreCompileInputs.cache
