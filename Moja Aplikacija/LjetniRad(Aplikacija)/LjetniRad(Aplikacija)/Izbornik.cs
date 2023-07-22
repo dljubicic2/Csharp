@@ -10,14 +10,16 @@ namespace LjetniRad_Aplikacija_
     internal class Izbornik
     {
         private ObradaUpit ObradaUpit;
+        private ObradaOsoba ObradaOsoba;
         public Izbornik() 
         {
             ObradaUpit = new ObradaUpit();
+            ObradaOsoba = new ObradaOsoba();
             PozdravnaPoruka();
-            PrikaziIbornik();
+            PrikaziIzbornik();
         }
 
-        private void PrikaziIbornik()
+        private void PrikaziIzbornik()
         {
             Console.WriteLine("Glavni izbornik");
             Console.WriteLine("1. Upiti");
@@ -31,19 +33,20 @@ namespace LjetniRad_Aplikacija_
             {
                 case 1:
                     ObradaUpit.PrikaziIzbornik();
-                    PrikaziIbornik();
+                    PrikaziIzbornik();
                     break;
                 case 2:
-                    Console.WriteLine("Rad s osobama");
-                    PrikaziIbornik();
+                    ObradaOsoba.PrikaziIzbornik();
+                    PrikaziIzbornik();
+                   
                     break;
                 case 3:
                     Console.WriteLine("Rad s oglasima");
-                    PrikaziIbornik();
+                    PrikaziIzbornik();
                     break;
                 case 4:
                     Console.WriteLine("Rad s vozilima");
-                    PrikaziIbornik();
+                    PrikaziIzbornik();
                     break;
                 case 5:
                     Console.WriteLine("Hvala na korištenju, doviđenja");
