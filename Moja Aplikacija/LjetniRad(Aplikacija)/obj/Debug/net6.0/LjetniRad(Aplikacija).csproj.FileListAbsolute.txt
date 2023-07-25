@@ -1,0 +1,15 @@
+C:\Users\Domagoj\Documents\GitHub\EdunovaWP1\Csharp\LjetniRad(Aplikacija)\LjetniRad(Aplikacija)\obj\Debug\net6.0\LjetniRad(Aplikacija).csproj.AssemblyReference.cache
+C:\Users\Domagoj\Documents\GitHub\EdunovaWP1\Csharp\LjetniRad(Aplikacija)\LjetniRad(Aplikacija)\obj\Debug\net6.0\LjetniRad(Aplikacija).GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Domagoj\Documents\GitHub\EdunovaWP1\Csharp\LjetniRad(Aplikacija)\LjetniRad(Aplikacija)\obj\Debug\net6.0\LjetniRad(Aplikacija).AssemblyInfoInputs.cache
+C:\Users\Domagoj\Documents\GitHub\EdunovaWP1\Csharp\LjetniRad(Aplikacija)\LjetniRad(Aplikacija)\obj\Debug\net6.0\LjetniRad(Aplikacija).AssemblyInfo.cs
+C:\Users\Domagoj\Documents\GitHub\EdunovaWP1\Csharp\LjetniRad(Aplikacija)\LjetniRad(Aplikacija)\obj\Debug\net6.0\LjetniRad(Aplikacija).csproj.CoreCompileInputs.cache
+C:\Users\Domagoj\Documents\GitHub\EdunovaWP1\Csharp\LjetniRad(Aplikacija)\LjetniRad(Aplikacija)\bin\Debug\net6.0\LjetniRad(Aplikacija).exe
+C:\Users\Domagoj\Documents\GitHub\EdunovaWP1\Csharp\LjetniRad(Aplikacija)\LjetniRad(Aplikacija)\bin\Debug\net6.0\LjetniRad(Aplikacija).deps.json
+C:\Users\Domagoj\Documents\GitHub\EdunovaWP1\Csharp\LjetniRad(Aplikacija)\LjetniRad(Aplikacija)\bin\Debug\net6.0\LjetniRad(Aplikacija).runtimeconfig.json
+C:\Users\Domagoj\Documents\GitHub\EdunovaWP1\Csharp\LjetniRad(Aplikacija)\LjetniRad(Aplikacija)\bin\Debug\net6.0\LjetniRad(Aplikacija).dll
+C:\Users\Domagoj\Documents\GitHub\EdunovaWP1\Csharp\LjetniRad(Aplikacija)\LjetniRad(Aplikacija)\bin\Debug\net6.0\LjetniRad(Aplikacija).pdb
+C:\Users\Domagoj\Documents\GitHub\EdunovaWP1\Csharp\LjetniRad(Aplikacija)\LjetniRad(Aplikacija)\obj\Debug\net6.0\LjetniRad(Aplikacija).dll
+C:\Users\Domagoj\Documents\GitHub\EdunovaWP1\Csharp\LjetniRad(Aplikacija)\LjetniRad(Aplikacija)\obj\Debug\net6.0\refint\LjetniRad(Aplikacija).dll
+C:\Users\Domagoj\Documents\GitHub\EdunovaWP1\Csharp\LjetniRad(Aplikacija)\LjetniRad(Aplikacija)\obj\Debug\net6.0\LjetniRad(Aplikacija).pdb
+C:\Users\Domagoj\Documents\GitHub\EdunovaWP1\Csharp\LjetniRad(Aplikacija)\LjetniRad(Aplikacija)\obj\Debug\net6.0\LjetniRad(Aplikacija).genruntimeconfig.cache
+C:\Users\Domagoj\Documents\GitHub\EdunovaWP1\Csharp\LjetniRad(Aplikacija)\LjetniRad(Aplikacija)\obj\Debug\net6.0\ref\LjetniRad(Aplikacija).dll
