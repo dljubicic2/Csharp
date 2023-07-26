@@ -56,7 +56,7 @@ namespace LjetniRad_Aplikacija_
                     {
                         BrisanjeUpita();
                     }
-                    BrisanjeUpita();
+                    
                     PrikaziIzbornik();
                     break;
                 case 5:

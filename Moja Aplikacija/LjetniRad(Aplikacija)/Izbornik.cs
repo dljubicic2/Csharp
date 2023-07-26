@@ -11,10 +11,12 @@ namespace LjetniRad_Aplikacija_
     {
         private ObradaUpit ObradaUpit;
         private ObradaOsoba ObradaOsoba;
+        private ObradaVozilo ObradaVozilo;
         public Izbornik() 
         {
             ObradaUpit = new ObradaUpit();
             ObradaOsoba = new ObradaOsoba();
+            ObradaVozilo = new ObradaVozilo();
             PozdravnaPoruka();
             PrikaziIzbornik();
         }
@@ -45,7 +47,7 @@ namespace LjetniRad_Aplikacija_
                     PrikaziIzbornik();
                     break;
                 case 4:
-                    Console.WriteLine("Rad s vozilima");
+                    ObradaVozilo.PrikaziIzbornik();
                     PrikaziIzbornik();
                     break;
                 case 5:

@@ -31,7 +31,7 @@ namespace LjetniRad_Aplikacija_
             });
         }
 
-        private void PrikaziIzbornik()
+        public void PrikaziIzbornik()
         {
 
 
@@ -61,9 +61,10 @@ namespace LjetniRad_Aplikacija_
 
         private void PregledOsobe()
         {
+            int b = 1;
             foreach(Osoba Osoba in Osobe)
             {
-                Console.WriteLine(Osoba);
+                Console.WriteLine("\t{0}. {1}", b++, Osoba);
             }
         }
 
