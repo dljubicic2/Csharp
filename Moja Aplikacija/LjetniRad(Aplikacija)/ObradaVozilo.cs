@@ -1,6 +1,8 @@
 ﻿using System;
+using System.Collections.Concurrent;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -9,9 +11,14 @@ namespace LjetniRad_Aplikacija_
     internal class ObradaVozilo
     {
         private List<Vozilo> Vozila;
+        private Izbornik Izbornik;
         public ObradaVozilo()
         {
             Vozila = new List<Vozilo>();
+        }
+        public ObradaVozilo(Izbornik izbornik):this() 
+        {
+            this.Izbornik=izbornik;
         }
         public void PrikaziIzbornik()
         {
@@ -24,6 +31,9 @@ namespace LjetniRad_Aplikacija_
             switch (Pomocno.UcitajBrojRaspon("Odaberite stavku izbornika vozila: ",
                 "Odabir mora biti 1-5", 1, 5))
             {
+                case 1:
+                    PrikaziVozila();
+                    break;
                 case 2:
                     UnosNovogVozila();
                     PrikaziIzbornik();
@@ -34,6 +44,17 @@ namespace LjetniRad_Aplikacija_
                
             }
         }
+
+        private void PrikaziVozila()
+        {
+            foreach(Vozilo vozilo in Vozila) 
+            {
+                Console.WriteLine("\t{0} ({1})",vozilo.Vrsta,vozilo.Marka,vozilo.Model,vozilo.Pogon,vozilo.Godiste,vozilo.Kilometraza,vozilo.Osobe);
+            }
+
+        }
+
+
 
         private void UnosNovogVozila()
         {
@@ -55,6 +76,14 @@ namespace LjetniRad_Aplikacija_
 
 
             Vozila.Add(g);
+        }
+
+        private List<Osoba> UcitajOsobu()
+        {
+            Izbornik.ObradaOsoba.PregledOsobe();
+            int broj = Pomocno.UcitajBrojRaspon("Odaberi redni broj osobe za postavljanje na vozilu: ",
+               "Nije dobro", 1, Izbornik.ObradaOsoba.Osobe.Count());
+            return Izbornik.ObradaOsoba.Osobe[broj - 1];
         }
     }
 }

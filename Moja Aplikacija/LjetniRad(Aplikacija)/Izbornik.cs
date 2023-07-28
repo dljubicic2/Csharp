@@ -10,13 +10,13 @@ namespace LjetniRad_Aplikacija_
     internal class Izbornik
     {
         private ObradaUpit ObradaUpit;
-        private ObradaOsoba ObradaOsoba;
+        public ObradaOsoba ObradaOsoba { get; }
         private ObradaVozilo ObradaVozilo;
         public Izbornik() 
         {
             ObradaUpit = new ObradaUpit();
             ObradaOsoba = new ObradaOsoba();
-            ObradaVozilo = new ObradaVozilo();
+            ObradaVozilo = new ObradaVozilo(this);
             PozdravnaPoruka();
             PrikaziIzbornik();
         }

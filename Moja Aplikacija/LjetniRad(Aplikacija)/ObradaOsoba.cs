@@ -52,6 +52,14 @@ namespace LjetniRad_Aplikacija_
                     UcitajOsobu();
                     PrikaziIzbornik();
                     break;
+                case 3:
+                    PromjenaOsobe();
+                    PrikaziIzbornik();
+                    break;
+                case 4:
+                    BrisanjeOsobe();
+                    PrikaziIzbornik();
+                    break;
                 case 5:
                     Console.WriteLine("Gotov rad s osobama");
                     break;
@@ -59,7 +67,33 @@ namespace LjetniRad_Aplikacija_
 
         }
 
-        private void PregledOsobe()
+        private void BrisanjeOsobe()
+        {
+            PregledOsobe();
+            int broj = Pomocno.UcitajBrojRaspon("Odaberi redni broj osobe za brisanje: ",
+                "Nije dobro", 1, Osobe.Count());
+            Osobe.RemoveAt(broj - 1);
+        }
+
+        public void PromjenaOsobe()
+        {
+            int broj = Pomocno.UcitajBrojRaspon("Odaberi redni broj osobe za promjenu: ",
+               "Nije dobro", 1, Osobe.Count());
+            var s = Osobe[broj - 1];
+            s.Sifra = Pomocno.UcitajCijeliBroj("Unesi sifru upita: (" + s.Sifra + "): ",
+                "Unos mora biti pozitivni cijeli broj");
+            s.Nadimak = Pomocno.UcitajString("Unesi nadimak osobe: (" + s.Nadimak + "): ",
+            "Unos obavezan");
+            s.Email = Pomocno.UcitajString("Unesi email: (" + s.Email + ") ",
+            "Unos obavezan");
+            s.Lozinka = Pomocno.UcitajString("Unesi lozinku: (" + s.Lozinka + "): ",
+            "Unos obavezan");
+
+            s.BrojTelefona = Pomocno.UcitajCijeliBroj("Unesi broj telefona osobe: (" + s.BrojTelefona + "): ",
+            "Unos obavezan");
+        }
+
+        public void PregledOsobe()
         {
             int b = 1;
             foreach(Osoba Osoba in Osobe)
