@@ -38,11 +38,47 @@ namespace LjetniRad_Aplikacija_
                     UnosNovogVozila();
                     PrikaziIzbornik();
                     break;
+                case 3:
+                    PromjenaVozila();
+                    PrikaziIzbornik();
+                    break;
+                case 4:
+                    BrisanjeVozila();
+                    PrikaziIzbornik();
+                    break;
                 case 5:
                     Console.WriteLine("Gotov rad s vozilima");
                     break;
                
             }
+        }
+
+        private void BrisanjeVozila()
+        {
+            BrisanjeVozila();
+            int broj = Pomocno.UcitajBrojRaspon("Odaberi redni broj vozila za brisanje: ",
+                "Nije dobro", 1, Vozila.Count());
+            Vozila.RemoveAt(broj - 1);
+        }
+
+        private void PromjenaVozila()
+        {
+            int broj = Pomocno.UcitajBrojRaspon("Odaberi redni broj vozila za promjenu: ",
+               "Nije dobro", 1, Vozila.Count());
+            var s = Vozila[broj - 1];
+            s.Sifra = Pomocno.UcitajCijeliBroj("Unesi sifru upita: (" + s.Sifra + "): ",
+               "Unos mora biti pozitivni cijeli broj");
+            s.Marka = Pomocno.UcitajString("Unesi nadimak osobe: (" + s.Marka + "): ",
+            "Unos obavezan");
+            s.Model = Pomocno.UcitajString("Unesi email: (" + s.Model + ") ",
+            "Unos obavezan");
+            s.Pogon = Pomocno.UcitajString("Unesi lozinku: (" + s.Pogon + "): ",
+            "Unos obavezan");
+            s.Godiste = Pomocno.UcitajCijeliBroj("Unesi godište vozila: (" + s.Kilometraza + "): ",
+
+            s.Kilometraza = Pomocno.UcitajCijeliBroj("Unesi kilometažu vozila: (" + s.Kilometraza + "): ",
+            "Unos obavezan"),
+            s.Osobe = UcitajOsobu();
         }
 
         private void PrikaziVozila()

@@ -11,12 +11,14 @@ namespace LjetniRad_Aplikacija_
     {
         private ObradaUpit ObradaUpit;
         public ObradaOsoba ObradaOsoba { get; }
-        private ObradaVozilo ObradaVozilo;
+        public ObradaVozilo ObradaVozilo { get; }
+        private ObradaOglas ObradaOglas;
         public Izbornik() 
         {
             ObradaUpit = new ObradaUpit();
             ObradaOsoba = new ObradaOsoba();
             ObradaVozilo = new ObradaVozilo(this);
+            ObradaOglas = new ObradaOglas();
             PozdravnaPoruka();
             PrikaziIzbornik();
         }
