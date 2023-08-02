@@ -70,19 +70,19 @@ namespace LjetniRad_Aplikacija_
             "Unos obavezan");
             s.Opis = Pomocno.UcitajString("Unesi opis oglasa: (" + s.Opis + "): ",
             "Unos obavezan");
-            s.Slika = Pomocno.UcitajString("Unesi sliku vozila: (" + s.Slika + "): ",
-            s.Osobe = UcitajOsobu(),
+            s.Osobe = UcitajOsobu();
 
             s.Cijena = Pomocno.UcitajCijeliBroj("Unesi cijenu vozila: (" + s.Cijena + "): ",
             "Unos obavezan");
             
         }
 
+
         private void PrikaziOglase()
         {
             foreach (Oglas Oglas in Oglasi)
             {
-                Console.WriteLine("\t{0} ({1})", Oglas.Vozila, Oglas.Naslov, Oglas.Opis, Oglas.Slika, Oglas.Osobe, Oglas.Cijena);
+                Console.WriteLine("\t{0} ({1})", Oglas.Vozila, Oglas.Naslov, Oglas.Opis, Oglas.Osobe, Oglas.Cijena);
             }
         }
 
@@ -95,14 +95,12 @@ namespace LjetniRad_Aplikacija_
                 "Unos obavezan");
             g.Opis = Pomocno.UcitajString("Unesite opis vozila:",
                 "Unos obavezan");
-            g.Slika = Pomocno.UcitajString("Ucitajte sliku vozila: ",
-                "Unos obavezan");
             g.Osobe = UcitajOsobu();
 
             g.Cijena = Pomocno.UcitajCijeliBroj("Unesite cijenu vozila: ",
                 "Unos obavezan");
 
-            Oglas.Add(g);
+            Oglasi.Add(g);
 
 
         }

@@ -30,6 +30,7 @@ namespace LjetniRad_Aplikacija_
                 {
                     Console.WriteLine(greska);
                 }
+                
             }
 
         }
@@ -71,7 +72,10 @@ namespace LjetniRad_Aplikacija_
                 Console.WriteLine(greska);
             }
         }
+        
+        
     }
+    
 
 }
            

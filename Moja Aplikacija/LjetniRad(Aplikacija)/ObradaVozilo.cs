@@ -74,7 +74,7 @@ namespace LjetniRad_Aplikacija_
             "Unos obavezan");
             s.Pogon = Pomocno.UcitajString("Unesi lozinku: (" + s.Pogon + "): ",
             "Unos obavezan");
-            s.Godiste = Pomocno.UcitajCijeliBroj("Unesi godište vozila: (" + s.Kilometraza + "): ",
+            s.Godiste = Pomocno.UcitajBrojRaspon("Unesi godište vozila: (" + s.Godiste + "): ",
 
             s.Kilometraza = Pomocno.UcitajCijeliBroj("Unesi kilometažu vozila: (" + s.Kilometraza + "): ",
             "Unos obavezan"),

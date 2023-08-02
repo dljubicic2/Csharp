@@ -11,9 +11,7 @@ namespace LjetniRad_Aplikacija_
         public List<Vozilo> Vozila { get; set; }
         public string Naslov { get; set; }
         public string Opis { get; set; }
-        public string Slika { get; set; }
         public List<Osoba> Osobe { get; set; }
-        public DateTime VrijemeIzrade { get; set; }
         public decimal Cijena { get; set; }
     }
 }

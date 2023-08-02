@@ -8,7 +8,7 @@ namespace LjetniRad_Aplikacija_
 {
     internal class ObradaOsoba
     {
-        public List<Osoba> Osobe { get; }
+        private List<Osoba> Osobe { get; }
         public ObradaOsoba()
         {
             Osobe = new List<Osoba>();
