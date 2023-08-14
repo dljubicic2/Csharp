@@ -1,0 +1,15 @@
+C:\Users\Domagoj\Documents\GitHub\EdunovaWP1\Csharp\MojZavrsniRadV2\MojZavrsniRadV2\obj\Debug\net6.0\MojZavrsniRadV2.csproj.AssemblyReference.cache
+C:\Users\Domagoj\Documents\GitHub\EdunovaWP1\Csharp\MojZavrsniRadV2\MojZavrsniRadV2\obj\Debug\net6.0\MojZavrsniRadV2.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Domagoj\Documents\GitHub\EdunovaWP1\Csharp\MojZavrsniRadV2\MojZavrsniRadV2\obj\Debug\net6.0\MojZavrsniRadV2.AssemblyInfoInputs.cache
+C:\Users\Domagoj\Documents\GitHub\EdunovaWP1\Csharp\MojZavrsniRadV2\MojZavrsniRadV2\obj\Debug\net6.0\MojZavrsniRadV2.AssemblyInfo.cs
+C:\Users\Domagoj\Documents\GitHub\EdunovaWP1\Csharp\MojZavrsniRadV2\MojZavrsniRadV2\obj\Debug\net6.0\MojZavrsniRadV2.csproj.CoreCompileInputs.cache
+C:\Users\Domagoj\Documents\GitHub\EdunovaWP1\Csharp\MojZavrsniRadV2\MojZavrsniRadV2\bin\Debug\net6.0\MojZavrsniRadV2.exe
+C:\Users\Domagoj\Documents\GitHub\EdunovaWP1\Csharp\MojZavrsniRadV2\MojZavrsniRadV2\bin\Debug\net6.0\MojZavrsniRadV2.deps.json
+C:\Users\Domagoj\Documents\GitHub\EdunovaWP1\Csharp\MojZavrsniRadV2\MojZavrsniRadV2\bin\Debug\net6.0\MojZavrsniRadV2.runtimeconfig.json
+C:\Users\Domagoj\Documents\GitHub\EdunovaWP1\Csharp\MojZavrsniRadV2\MojZavrsniRadV2\bin\Debug\net6.0\MojZavrsniRadV2.dll
+C:\Users\Domagoj\Documents\GitHub\EdunovaWP1\Csharp\MojZavrsniRadV2\MojZavrsniRadV2\bin\Debug\net6.0\MojZavrsniRadV2.pdb
+C:\Users\Domagoj\Documents\GitHub\EdunovaWP1\Csharp\MojZavrsniRadV2\MojZavrsniRadV2\obj\Debug\net6.0\MojZavrsniRadV2.dll
+C:\Users\Domagoj\Documents\GitHub\EdunovaWP1\Csharp\MojZavrsniRadV2\MojZavrsniRadV2\obj\Debug\net6.0\refint\MojZavrsniRadV2.dll
+C:\Users\Domagoj\Documents\GitHub\EdunovaWP1\Csharp\MojZavrsniRadV2\MojZavrsniRadV2\obj\Debug\net6.0\MojZavrsniRadV2.pdb
+C:\Users\Domagoj\Documents\GitHub\EdunovaWP1\Csharp\MojZavrsniRadV2\MojZavrsniRadV2\obj\Debug\net6.0\MojZavrsniRadV2.genruntimeconfig.cache
+C:\Users\Domagoj\Documents\GitHub\EdunovaWP1\Csharp\MojZavrsniRadV2\MojZavrsniRadV2\obj\Debug\net6.0\ref\MojZavrsniRadV2.dll
