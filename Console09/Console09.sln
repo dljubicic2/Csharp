@@ -7,6 +7,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "01Lambda", "01Lambda\01Lamb
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "02Delegati", "02Delegati\02Delegati.csproj", "{66D332ED-F4A5-471B-A1E8-C11021CF5CEB}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03Ekstenzije", "03Ekstenzije\03Ekstenzije.csproj", "{2E3E6B64-3AD9-4F76-9512-4E43640E1E87}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{66D332ED-F4A5-471B-A1E8-C11021CF5CEB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{66D332ED-F4A5-471B-A1E8-C11021CF5CEB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{66D332ED-F4A5-471B-A1E8-C11021CF5CEB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2E3E6B64-3AD9-4F76-9512-4E43640E1E87}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2E3E6B64-3AD9-4F76-9512-4E43640E1E87}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2E3E6B64-3AD9-4F76-9512-4E43640E1E87}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2E3E6B64-3AD9-4F76-9512-4E43640E1E87}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
