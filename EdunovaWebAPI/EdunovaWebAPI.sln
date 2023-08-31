@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.6.33723.286
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebApplication1", "WebApplication1\WebApplication1.csproj", "{1AED8990-0803-4A60-AF9A-2C2789F8A281}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EdunovaApp", "EdunovaApp\EdunovaApp.csproj", "{A108D2B1-781D-45F0-80BE-C3D157768FAE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1AED8990-0803-4A60-AF9A-2C2789F8A281}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1AED8990-0803-4A60-AF9A-2C2789F8A281}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1AED8990-0803-4A60-AF9A-2C2789F8A281}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1AED8990-0803-4A60-AF9A-2C2789F8A281}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A108D2B1-781D-45F0-80BE-C3D157768FAE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A108D2B1-781D-45F0-80BE-C3D157768FAE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A108D2B1-781D-45F0-80BE-C3D157768FAE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A108D2B1-781D-45F0-80BE-C3D157768FAE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {21740377-190E-47A6-9548-62FECBE74141}
+	EndGlobalSection
+EndGlobal
