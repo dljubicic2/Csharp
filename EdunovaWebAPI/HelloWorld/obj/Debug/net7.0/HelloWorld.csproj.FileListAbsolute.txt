@@ -31,3 +31,4 @@ C:\Users\Domagoj\Documents\GitHub\EdunovaWP1\Csharp\EdunovaWebAPI\HelloWorld\obj
 C:\Users\Domagoj\Documents\GitHub\EdunovaWP1\Csharp\EdunovaWebAPI\HelloWorld\obj\Debug\net7.0\HelloWorld.pdb
 C:\Users\Domagoj\Documents\GitHub\EdunovaWP1\Csharp\EdunovaWebAPI\HelloWorld\obj\Debug\net7.0\HelloWorld.genruntimeconfig.cache
 C:\Users\Domagoj\Documents\GitHub\EdunovaWP1\Csharp\EdunovaWebAPI\HelloWorld\obj\Debug\net7.0\ref\HelloWorld.dll
+C:\Users\Domagoj\Documents\GitHub\EdunovaWP1\Csharp\EdunovaWebAPI\HelloWorld\bin\Debug\net7.0\Newtonsoft.Json.dll
