@@ -1,4 +1,5 @@
-﻿using EdunovaApp.Models;
+﻿using EdunovaApp.Data;
+using EdunovaApp.Models;
 using Microsoft.AspNetCore.Mvc;
 
 namespace EdunovaApp.Controllers
@@ -7,20 +8,26 @@ namespace EdunovaApp.Controllers
     [Route("api/v1/[controller])")]
     public class SmjerController : ControllerBase
     {
+        private readonly EdunovaContext _context;
+
+        public SmjerController(EdunovaContext context)
+        {
+            _context = context;
+        }
+        
         [HttpGet]
         public IActionResult Get()
         {
-            var lista = new List<Smjer>()
-            {
-                new () {Naziv = "prvi"},
-                new () {Naziv = "drugi"}
-            };
-            return new JsonResult(lista);
+
+            return new JsonResult(_context.Smjer.ToList());
         }
 
         [HttpPost]
         public IActionResult Post(Smjer smjer)
         {
+            _context.Smjer.Add(smjer);
+            _context.SaveChanges();
+
             // Dodavanje u bazu
             return Created("/api/v1/Smjer", smjer); //201
         }
@@ -30,6 +37,7 @@ namespace EdunovaApp.Controllers
         public IActionResult Put(Smjer smjer, int sifra)
         {
             // Promjena u bazi
+
             return StatusCode(StatusCodes.Status200OK, smjer);
         }
 
