@@ -1,6 +1,7 @@
 ﻿using EdunovaWP1.Data;
 using EdunovaWP1.Models;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Data.SqlClient;
 
 namespace EdunovaWP1.Controllers
 {
@@ -17,24 +18,85 @@ namespace EdunovaWP1.Controllers
         [HttpGet]
         public IActionResult Get()
         {
-            return new JsonResult(_context.Osoba.ToList());
+            if (ModelState.IsValid)
+            {
+                return BadRequest(ModelState);
+            }
+            try
+            {
+                var osobe = _context.Osoba.ToList();
+                if(osobe==null || osobe.Count == 0)
+                {
+                    return new EmptyResult();
+                }
+                return new JsonResult(_context.Osoba.ToList());
+
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(StatusCodes.Status503ServiceUnavailable, 
+                                    ex.Message);
+            }
+            
+          
         }
 
         [HttpPost]
         public IActionResult Post(Osoba osoba)
         {
-            _context.Osoba.Add(osoba);
-            _context.SaveChanges();
 
-            return Created("/api/v1/osoba", osoba);
+            if (ModelState.IsValid)
+            {
+                return BadRequest(ModelState);
+            }
+            try
+            {
+                _context.Osoba.Add(osoba);
+                _context.SaveChanges();
+                return StatusCode(StatusCodes.Status201Created, osoba);
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(StatusCodes.Status503ServiceUnavailable,
+                                    ex.Message);
+            }
+
+
+            
         }
 
         [HttpPut]
         [Route("{sifra:int}")]
-        public IActionResult Put(Osoba osoba)
+        public IActionResult Put(int sifra, Osoba osoba)
         {
+            if (sifra <= 0)
+            {
+                return BadRequest();
+            }
+            try
+            {
+                var osobaBaza = _context.Osoba.Find(sifra);
+                if(osobaBaza == null)
+                {
+                    return BadRequest();
+                }
+                osobaBaza.Nadimak = osoba.Nadimak;
+                osoba.Email = osoba.Email;
+                osoba.Lozinka = osoba.Lozinka;
+                osoba.BrojTelefona = osoba.BrojTelefona;
 
-            return StatusCode(StatusCodes.Status200OK, osoba);
+                _context.Osoba.Update(osobaBaza);
+                _context.SaveChanges();
+
+                return StatusCode(StatusCodes.Status200OK, osobaBaza);
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(StatusCodes.Status503ServiceUnavailable,
+                                    ex.Message);
+
+            }
+
         }
 
         [HttpDelete]
@@ -42,7 +104,42 @@ namespace EdunovaWP1.Controllers
         [Produces("application/json")]
         public IActionResult Delete(int sifra)
         {
-            return StatusCode(StatusCodes.Status200OK, "{\"obrisano\":true}");
+            if (sifra <= 0)
+            {
+                return BadRequest();
+            }
+            try
+            {
+                var osobaBaza = _context.Osoba.Find(sifra);
+                if (osobaBaza == null)
+                {
+                    return BadRequest();
+                }
+
+                _context.Osoba.Remove(osobaBaza);
+                _context.SaveChanges();
+
+                return new JsonResult("{\"poruka\":\"Obrisano\"}");
+
+            }
+            catch (Exception ex)
+            {
+                try
+                {
+                    SqlException sqle = (SqlException)ex;
+                    return StatusCode(StatusCodes.Status503ServiceUnavailable,
+                                   sqle);
+                }
+                catch (Exception e)
+                {
+
+                    
+                }
+
+                return StatusCode(StatusCodes.Status503ServiceUnavailable,
+                                    ex.Message);
+
+            }
         }
     }
 }
