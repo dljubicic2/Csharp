@@ -5,7 +5,7 @@ VisualStudioVersion = 17.6.33723.286
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HelloWorld", "HelloWorld\HelloWorld.csproj", "{ADDBACF6-8519-4D69-8597-FBA8F532098D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EdunovaApp", "EdunovaApp\EdunovaApp.csproj", "{9F9060AF-C23F-4B77-A0C4-ED17882AC50F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EdunovaApp", "EdunovaApp\EdunovaApp.csproj", "{9F9060AF-C23F-4B77-A0C4-ED17882AC50F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
