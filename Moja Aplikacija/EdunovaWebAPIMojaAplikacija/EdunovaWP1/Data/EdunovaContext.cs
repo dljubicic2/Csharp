@@ -11,6 +11,9 @@ namespace EdunovaWP1.Data
         }
         public DbSet<Osoba> Osoba { get; set; }
         public DbSet<Vozilo> Vozilo { get; set; }
+        public DbSet<Oglas> Oglas { get; set; }
+        public DbSet<Upit> Upit { get; set; }
+
         protected override void OnModelCreating(
             ModelBuilder modelBuilder)
         {

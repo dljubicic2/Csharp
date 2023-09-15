@@ -18,7 +18,7 @@ namespace EdunovaWP1.Controllers
         [HttpGet]
         public IActionResult Get()
         {
-            if (ModelState.IsValid)
+            if (!ModelState.IsValid)
             {
                 return BadRequest(ModelState);
             }
@@ -45,7 +45,7 @@ namespace EdunovaWP1.Controllers
         public IActionResult Post(Osoba osoba)
         {
 
-            if (ModelState.IsValid)
+            if (!ModelState.IsValid)
             {
                 return BadRequest(ModelState);
             }
