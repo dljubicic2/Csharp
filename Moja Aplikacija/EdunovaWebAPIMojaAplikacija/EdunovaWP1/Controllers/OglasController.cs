@@ -18,6 +18,12 @@ namespace EdunovaWP1.Controllers
         private readonly EdunovaContext _context;
         private readonly ILogger<OglasController> _logger;
 
+        /// <summary>
+        /// Konstruktor
+        /// </summary>
+        /// <param name="context"></param>
+        /// <param name="logger"></param>
+
         public OglasController(EdunovaContext context, 
             ILogger<OglasController> logger)
         {
@@ -38,68 +44,59 @@ namespace EdunovaWP1.Controllers
             try
             {
                 var oglasi = _context.Oglas
-                    .Include(og => og.Vozilo)
                     .Include(og => og.Osoba)
                     .ToList();
 
-                if (oglasi == null || oglasi.Count == 0)
+                if(oglasi == null || oglasi.Count == 0)
                 {
                     return new EmptyResult();
                 }
 
                 List<OglasDTO> vrati = new();
 
-                oglasi.ForEach(og => {
-                    var ogdto = new OglasDTO()
+                oglasi.ForEach(og =>
+                {
+                    vrati.Add(new OglasDTO()
                     {
                         Sifra = og.Sifra,
                         Naslov = og.Naslov,
                         Opis = og.Opis,
-                        Cijena = og.Cijena
-                        
-                        
-
-                    };
-                    
-
+                        Cijena = og.Cijena,
+                        Osoba = og.Osoba?.Nadimak,
+                        SifraOsoba = og.Osoba.Sifra
+                    });
                 });
 
                 return Ok(vrati);
-            }
-
-
-
-            catch (Exception ex)
-            {
-                return StatusCode(
-                    StatusCodes.Status503ServiceUnavailable, 
-                    ex);
+                    
                 
             }
-            
+            catch ( Exception ex)
+            {
+                return StatusCode(StatusCodes.Status503ServiceUnavailable, ex);
+                
+            }            
             
         }
 
         [HttpPost]
         public IActionResult Post(OglasDTO oglasDTO)
         {
-
             if (!ModelState.IsValid)
             {
                 return BadRequest(ModelState);
             }
 
-            if (oglasDTO.SifraVozilo <= 0)
+            if (oglasDTO.SifraOsoba <= 0)
             {
                 return BadRequest(ModelState);
             }
 
             try
             {
+                var osoba = _context.Osoba.Find(oglasDTO.SifraOsoba);
 
-                var vozilo = _context.Oglas.Find(oglasDTO.SifraVozilo);
-
-                if (vozilo == null)
+                if (osoba == null)
                 {
                     return BadRequest(ModelState);
                 }
@@ -107,27 +104,24 @@ namespace EdunovaWP1.Controllers
                 Oglas og = new()
                 {
                     Naslov = oglasDTO.Naslov,
-                    Opis = oglasDTO.Opis,
-                    Cijena = oglasDTO.Cijena
+                    Opis = oglasDTO.Naslov,
+                    Cijena = oglasDTO.Cijena,
+                    Osoba = osoba
                 };
 
-                _context.Oglas.Add(g);
+                _context.Oglas.Add(og);
                 _context.SaveChanges();
 
                 oglasDTO.Sifra = og.Sifra;
-                
+                oglasDTO.Osoba = osoba.Nadimak;
 
                 return Ok(oglasDTO);
-
-
             }
             catch (Exception ex)
             {
-                return StatusCode(
-                   StatusCodes.Status503ServiceUnavailable,
-                   ex);
-            }
+                return StatusCode(StatusCodes.Status503ServiceUnavailable, ex);
 
+            }
         }
         [HttpPut]
         [Route("{sifra:int}")]
@@ -144,7 +138,7 @@ namespace EdunovaWP1.Controllers
 
             try
             {
-                var vozilo = _context.Oglas.Find(oglasDTO.SifraVozilo);
+                var vozilo = _context.Oglas.Find(oglasDTO.SifraOsoba);
 
                 if (vozilo == null)
                 {

@@ -17,12 +17,11 @@ namespace EdunovaWP1.Data
         protected override void OnModelCreating(
             ModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<Vozilo>().HasOne(o => o.Osoba);
-
-            modelBuilder.Entity<Oglas>().HasOne(o => o.Osoba);
-
-            modelBuilder.Entity<Upit>()
-                .HasMany(u => u.Osoba);
+            modelBuilder.Entity<Vozilo>().HasOne(os => os.Osoba);
+            modelBuilder.Entity<Oglas>().HasOne(os => os.Osoba);
+            modelBuilder.Entity<Upit>().HasOne(os => os.Osoba);
+            modelBuilder.Entity<Upit>().HasOne(og => og.Oglas);
+            
                 
                 
                 

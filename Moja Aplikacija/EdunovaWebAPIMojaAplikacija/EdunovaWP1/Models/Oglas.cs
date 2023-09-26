@@ -10,7 +10,5 @@ namespace EdunovaWP1.Models
         [ForeignKey("osoba")]
         public Osoba? Osoba { get; set; }
 
-        [ForeignKey("vozilo")]
-        public Vozilo? Vozilo { get; set; } = new();
     }
 }

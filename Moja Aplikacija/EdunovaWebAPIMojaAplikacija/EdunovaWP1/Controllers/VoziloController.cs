@@ -7,16 +7,27 @@ using Microsoft.EntityFrameworkCore.Update.Internal;
 
 namespace EdunovaWP1.Controllers
 {
-
+    /// <summary>
+    /// Namijenjeno za CRUD operacije nad Vozilom!
+    /// </summary>
+   
     [ApiController]
     [Route("api/v1/[controller]")]
     public class VoziloController :ControllerBase
     {
         private readonly EdunovaContext _context;
+        private readonly ILogger<VoziloController> _logger;
 
-        public VoziloController(EdunovaContext context)
+        /// <summary>
+        /// Konstruktor
+        /// </summary>
+        /// <param name="context"></param>
+
+        public VoziloController(EdunovaContext context, 
+            ILogger<VoziloController> logger)
         {
             _context = context;
+            _logger = logger;
         }
 
         [HttpGet]
@@ -57,35 +68,48 @@ namespace EdunovaWP1.Controllers
         }
 
         [HttpPost]
-        public IActionResult Post(VoziloDTO dto)
+        public IActionResult Post(VoziloDTO voziloDTO)
         {
             if (!ModelState.IsValid)
             {
                 return BadRequest(ModelState);
             }
 
+            if (voziloDTO.SifraOsoba <= 0)
+            {
+                return BadRequest(ModelState);
+            }
+
             try
             {
-                Vozilo v = new Vozilo()
+                var osoba = _context.Osoba.Find(voziloDTO.SifraOsoba);
+
+                if (osoba == null)
                 {
-                    Model = dto.Model,
-                    Marka = dto.Marka,
-                    Pogon = dto.Pogon,
-                    Kilometraza = dto.Kilometraza,
-                    Godiste = dto.Godiste
+                    return BadRequest(ModelState);
+                }
+
+                Vozilo v = new()
+                {
+                    Marka = voziloDTO.Marka,
+                    Model = voziloDTO.Model,
+                    Pogon = voziloDTO.Pogon,
+                    Kilometraza = voziloDTO.Kilometraza,
+                    Godiste = voziloDTO.Godiste,
+                    Osoba = osoba
                 };
 
                 _context.Vozilo.Add(v);
                 _context.SaveChanges();
 
-                dto.Sifra= v.Sifra;
+                voziloDTO.Sifra = v.Sifra;
+                voziloDTO.Osoba = osoba.Nadimak;
 
-                return Ok(dto);
+                return Ok(voziloDTO);
             }
-
-            catch (Exception ex)
+            catch ( Exception ex)
             {
-                return StatusCode(StatusCodes.Status503ServiceUnavailable, ex.Message);
+                return StatusCode(StatusCodes.Status503ServiceUnavailable, ex);
                 
             }
         }

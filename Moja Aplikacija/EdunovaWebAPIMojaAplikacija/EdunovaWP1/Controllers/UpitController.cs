@@ -77,7 +77,6 @@ namespace EdunovaWP1.Controllers
         [HttpPost]
         public IActionResult Post(UpitDTO upitDTO)
         {
-
             if (!ModelState.IsValid)
             {
                 return BadRequest(ModelState);
@@ -88,12 +87,24 @@ namespace EdunovaWP1.Controllers
                 return BadRequest(ModelState);
             }
 
+            if(upitDTO.SifraOglas <= 0)
+            {
+                return BadRequest(ModelState);
+            }
+
             try
             {
+                var osoba = _context.Osoba.Find(upitDTO.SifraOsoba);
+                var oglas = _context.Oglas.Find(upitDTO.SifraOglas);
+            
+               
 
-                var upit = _context.Upit.Find(upitDTO.SifraOsoba);
+                if (osoba == null)
+                {
+                    return BadRequest(ModelState);
+                }
 
-                if (upit == null)
+                if(oglas == null)
                 {
                     return BadRequest(ModelState);
                 }
@@ -101,7 +112,8 @@ namespace EdunovaWP1.Controllers
                 Upit u = new()
                 {
                     Pitanje = upitDTO.Pitanje,
-                    
+                    Osoba = osoba,
+                    Oglas = oglas
                     
                     
                 };
@@ -110,20 +122,20 @@ namespace EdunovaWP1.Controllers
                 _context.SaveChanges();
 
                 upitDTO.Sifra = u.Sifra;
-                
+                upitDTO.SifraOsoba = osoba.Sifra;
+                upitDTO.SifraOglas = oglas.Sifra;
+               
 
                 return Ok(upitDTO);
-
-
             }
             catch (Exception ex)
             {
-                return StatusCode(
-                   StatusCodes.Status503ServiceUnavailable,
-                   ex);
-            }
+                return StatusCode(StatusCodes.Status503ServiceUnavailable, ex);
 
+            }
         }
+
+
         [HttpPut]
         [Route("{sifra:int}")]
         public IActionResult Put(int sifra, UpitDTO upitDTO)
@@ -154,7 +166,7 @@ namespace EdunovaWP1.Controllers
                 }
 
                 upit.Pitanje = upitDTO.Pitanje;
-                upit.Osoba = upitDTO.SifraOsoba;
+             
                 
 
                 _context.Upit.Update(upit);

@@ -7,6 +7,7 @@ namespace EdunovaWP1.Models
         public string? Pitanje { get; set; }
         [ForeignKey("oglas")]
         public Oglas? Oglas { get; set; }
-        public List<Osoba> Osoba { get; set; }
+        [ForeignKey("osoba")]
+        public Osoba? Osoba { get; set; }
     }
 }

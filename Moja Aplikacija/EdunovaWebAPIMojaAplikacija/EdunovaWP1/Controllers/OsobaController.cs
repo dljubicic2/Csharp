@@ -5,15 +5,23 @@ using Microsoft.Data.SqlClient;
 
 namespace EdunovaWP1.Controllers
 {
+    /// <summary>
+    /// Namijenjeno za CRUD operacije nad entitetom smjer u bazi!
+    /// </summary>
+    
     [ApiController]
     [Route("api/v1/[controller]")]
     public class OsobaController : ControllerBase
     {
+        // Dependency injection u controller
+        
         private readonly EdunovaContext _context;
         public OsobaController(EdunovaContext context)
         {
             _context = context;
         }
+
+      
 
         [HttpGet]
         public IActionResult Get()
@@ -37,8 +45,14 @@ namespace EdunovaWP1.Controllers
                 return StatusCode(StatusCodes.Status503ServiceUnavailable, 
                                     ex.Message);
             }
-            
-          
+
+            /// <summary>
+            /// Dohvaća sve osobe iz baze
+            /// </summary>
+            /// <remarks>
+            /// <returns></returns>
+
+
         }
 
         [HttpPost]
@@ -49,20 +63,29 @@ namespace EdunovaWP1.Controllers
             {
                 return BadRequest(ModelState);
             }
+
             try
             {
                 _context.Osoba.Add(osoba);
                 _context.SaveChanges();
+
                 return StatusCode(StatusCodes.Status201Created, osoba);
             }
+
             catch (Exception ex)
             {
                 return StatusCode(StatusCodes.Status503ServiceUnavailable,
                                     ex.Message);
             }
 
+            /// <summary>
+            /// Dodaje osobu u bazu
+            /// </summary>
+            /// <remarks>
+            /// <returns></returns>
 
-            
+
+
         }
 
         [HttpPut]
@@ -83,7 +106,7 @@ namespace EdunovaWP1.Controllers
                 osobaBaza.Nadimak = osoba.Nadimak;
                 osoba.Email = osoba.Email;
                 osoba.Lozinka = osoba.Lozinka;
-                osoba.BrojTelefona = osoba.BrojTelefona;
+              
 
                 _context.Osoba.Update(osobaBaza);
                 _context.SaveChanges();
@@ -97,6 +120,12 @@ namespace EdunovaWP1.Controllers
 
             }
 
+            /// <summary>
+            /// Mijenja postojeću osobu u bazi
+            /// </summary>
+            /// <remarks>
+            /// <returns></returns>
+
         }
 
         [HttpDelete]
@@ -104,42 +133,35 @@ namespace EdunovaWP1.Controllers
         [Produces("application/json")]
         public IActionResult Delete(int sifra)
         {
-            if (sifra <= 0)
+            if(sifra <= 0)
             {
                 return BadRequest();
             }
+
+            var osobaBaza = _context.Osoba.Find(sifra);
+            if(osobaBaza == null)
+            {
+                return BadRequest();
+            }
+
             try
             {
-                var osobaBaza = _context.Osoba.Find(sifra);
-                if (osobaBaza == null)
-                {
-                    return BadRequest();
-                }
-
                 _context.Osoba.Remove(osobaBaza);
                 _context.SaveChanges();
 
                 return new JsonResult("{\"poruka\":\"Obrisano\"}");
-
             }
             catch (Exception ex)
             {
-                try
-                {
-                    SqlException sqle = (SqlException)ex;
-                    return StatusCode(StatusCodes.Status503ServiceUnavailable,
-                                   sqle);
-                }
-                catch (Exception e)
-                {
-
-                    
-                }
-
-                return StatusCode(StatusCodes.Status503ServiceUnavailable,
-                                    ex.Message);
+                return new JsonResult("{\"poruka\":\"Ne može se obrisati\"}");
 
             }
         }
+
+        /// <summary>
+        /// Briše osobu iz baze
+        /// </summary>
+        /// <remarks>
+        /// <returns></returns>
     }
 }
