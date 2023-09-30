@@ -21,8 +21,10 @@ builder.Services.AddDbContext<EdunovaContext>(o =>
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
-if (app.Environment.IsDevelopment())
-{
+//if (app.Enviroment.IsDevelopment())
+//{
+//if (app.Environment.IsDevelopment())
+//{
     app.UseSwagger(opcije =>
     {
         opcije.SerializeAsV2 = true;
@@ -31,10 +33,16 @@ if (app.Environment.IsDevelopment())
     {
         opcije.ConfigObject.AdditionalItems.Add("requestSnippetsEnabled", true);
     });
-}
+//}
+//}
 
-app.UseHttpsRedirection();
+//app.UseHttpsRedirection();
 
 app.MapControllers();
+app.UseStaticFiles();
+
+app.UseDefaultFiles();
+app.UseDeveloperExceptionPage();
+app.MapFallbackToFile("index.html");
 
 app.Run();
