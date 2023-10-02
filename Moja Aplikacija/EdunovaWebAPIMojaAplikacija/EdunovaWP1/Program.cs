@@ -1,4 +1,4 @@
-using EdunovaWP1.Data;
+﻿using EdunovaWP1.Data;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -9,6 +9,14 @@ builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+
+// Loš način
+builder.Services.AddCors(opcije =>
+{
+    opcije.AddPolicy("CorsPolicy", 
+        builder => 
+        builder.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader());
+});
 
 // Dodavanje baze podataka
 builder.Services.AddDbContext<EdunovaContext>(o =>
@@ -44,5 +52,7 @@ app.UseStaticFiles();
 app.UseDefaultFiles();
 app.UseDeveloperExceptionPage();
 app.MapFallbackToFile("index.html");
+
+app.UseCors("CorsPolicy");
 
 app.Run();
