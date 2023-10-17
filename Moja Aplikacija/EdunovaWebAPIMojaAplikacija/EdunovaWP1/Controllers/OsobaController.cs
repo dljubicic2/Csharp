@@ -6,7 +6,7 @@ using Microsoft.Data.SqlClient;
 namespace EdunovaWP1.Controllers
 {
     /// <summary>
-    /// Namijenjeno za CRUD operacije nad entitetom smjer u bazi!
+    /// Namijenjeno za CRUD operacije nad entitetom osoba u bazi!
     /// </summary>
     
     [ApiController]
@@ -53,6 +53,31 @@ namespace EdunovaWP1.Controllers
             /// <returns></returns>
 
 
+        }
+
+        [HttpGet]
+        [Route("{sifra:int}")]
+        public IActionResult GetBySifra(int sifra) 
+        {
+            if (sifra <= 0)
+            {
+                return BadRequest(ModelState);
+            }
+
+            try
+            {
+                var os = _context.Osoba.Find(sifra);
+                if (os == null)
+                {
+                    return StatusCode(StatusCodes.Status204NoContent, os);
+                }
+                return new JsonResult(os);
+            }
+            catch ( Exception ex)
+            {
+                return StatusCode(StatusCodes.Status503ServiceUnavailable, ex.Message);
+                
+            }
         }
 
         [HttpPost]

@@ -18,7 +18,7 @@
         </member>
         <member name="T:EdunovaWP1.Controllers.OsobaController">
             <summary>
-            Namijenjeno za CRUD operacije nad entitetom smjer u bazi!
+            Namijenjeno za CRUD operacije nad entitetom osoba u bazi!
             </summary>
         </member>
         <member name="T:EdunovaWP1.Controllers.UpitController">

@@ -1,11 +1,19 @@
 {
   "Version": 1,
-  "Hash": "yYi0R8jkeOwcnCfVgRV8fMVw/+nyI29FwNmwf7oWifg=",
+  "Hash": "v/AmPwlA3KWX4Omd0usQqhbYXvogJ+r8zSn/ANJBTPg=",
   "Source": "EdunovaWP1",
   "BasePath": "_content/EdunovaWP1",
   "Mode": "Default",
   "ManifestType": "Publish",
   "ReferencedProjectsConfiguration": [],
-  "DiscoveryPatterns": [],
+  "DiscoveryPatterns": [
+    {
+      "Name": "EdunovaWP1\\wwwroot",
+      "Source": "EdunovaWP1",
+      "ContentRoot": "C:\\Users\\Domagoj\\Documents\\GitHub\\EdunovaWP1\\Csharp\\EdunovaWebAPIMojaAplikacija\\EdunovaWP1\\wwwroot\\",
+      "BasePath": "_content/EdunovaWP1",
+      "Pattern": "**"
+    }
+  ],
   "Assets": []
 }
