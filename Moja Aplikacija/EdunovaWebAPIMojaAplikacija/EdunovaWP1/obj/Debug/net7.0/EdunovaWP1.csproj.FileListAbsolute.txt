@@ -72,3 +72,4 @@ C:\Users\Domagoj\Documents\GitHub\EdunovaWP1\Csharp\EdunovaWebAPIMojaAplikacija\
 C:\Users\Domagoj\Documents\GitHub\EdunovaWP1\Csharp\EdunovaWebAPIMojaAplikacija\EdunovaWP1\bin\Debug\net7.0\runtimes\win\lib\netcoreapp3.0\System.Windows.Extensions.dll
 C:\Users\Domagoj\Documents\GitHub\EdunovaWP1\Csharp\EdunovaWebAPIMojaAplikacija\EdunovaWP1\bin\Debug\net7.0\EdunovaWP1.xml
 C:\Users\Domagoj\Documents\GitHub\EdunovaWP1\Csharp\EdunovaWebAPIMojaAplikacija\EdunovaWP1\obj\Debug\net7.0\EdunovaWP1.xml
+C:\Users\Domagoj\Documents\GitHub\EdunovaWP1\Csharp\EdunovaWebAPIMojaAplikacija\EdunovaWP1\bin\Debug\net7.0\EdunovaWP1.staticwebassets.runtime.json
