@@ -72,8 +72,34 @@ namespace EdunovaWP1.Controllers
                     ex);
             }
 
-
         }
+
+        [HttpGet]
+        [Route("{sifra:int}")]
+        public IActionResult GetBySifra(int sifra)
+        {
+            if (sifra <= 0)
+            {
+                return BadRequest(ModelState);
+            }
+
+            try
+            {
+                var u = _context.Upit.Find(sifra);
+                if (u == null)
+                {
+                    return StatusCode(StatusCodes.Status204NoContent, u);
+                }
+                return new JsonResult(u);
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(StatusCodes.Status503ServiceUnavailable, ex.Message);
+
+            }
+        }
+
+
         [HttpPost]
         public IActionResult Post(UpitDTO upitDTO)
         {

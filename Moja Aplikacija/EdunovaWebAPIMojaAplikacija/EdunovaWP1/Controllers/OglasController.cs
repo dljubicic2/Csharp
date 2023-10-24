@@ -79,6 +79,33 @@ namespace EdunovaWP1.Controllers
             
         }
 
+        [HttpGet]
+        [Route("{sifra:int}")]
+        public IActionResult GetBySifra(int sifra)
+        {
+            if (sifra <= 0)
+            {
+                return BadRequest(ModelState);
+            }
+
+            try
+            {
+                var og = _context.Oglas.Find(sifra);
+                if (og == null)
+                {
+                    return StatusCode(StatusCodes.Status204NoContent, og);
+                }
+                return new JsonResult(og);
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(StatusCodes.Status503ServiceUnavailable, ex.Message);
+
+            }
+        }
+
+
+
         [HttpPost]
         public IActionResult Post(OglasDTO oglasDTO)
         {

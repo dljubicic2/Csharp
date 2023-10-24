@@ -67,6 +67,31 @@ namespace EdunovaWP1.Controllers
             return Ok(vrati);
         }
 
+        [HttpGet]
+        [Route("{sifra:int}")]
+        public IActionResult GetBySifra(int sifra)
+        {
+            if (sifra <= 0)
+            {
+                return BadRequest(ModelState);
+            }
+
+            try
+            {
+                var v = _context.Vozilo.Find(sifra);
+                if (v == null)
+                {
+                    return StatusCode(StatusCodes.Status204NoContent, v);
+                }
+                return new JsonResult(v);
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(StatusCodes.Status503ServiceUnavailable, ex.Message);
+
+            }
+        }
+
         [HttpPost]
         public IActionResult Post(VoziloDTO voziloDTO)
         {
