@@ -1,0 +1,189 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Users\\Domagoj\\Documents\\GitHub\\EdunovaWP1\\Csharp\\EdunovaWebAPIMojaAplikacija\\EdunovaWP1\\wwwroot\\.gitignore",
+      "PackagePath": "staticwebassets\\.gitignore"
+    },
+    {
+      "Id": "C:\\Users\\Domagoj\\Documents\\GitHub\\EdunovaWP1\\Csharp\\EdunovaWebAPIMojaAplikacija\\EdunovaWP1\\wwwroot\\build\\asset-manifest.json",
+      "PackagePath": "staticwebassets\\build\\asset-manifest.json"
+    },
+    {
+      "Id": "C:\\Users\\Domagoj\\Documents\\GitHub\\EdunovaWP1\\Csharp\\EdunovaWebAPIMojaAplikacija\\EdunovaWP1\\wwwroot\\build\\favicon.ico",
+      "PackagePath": "staticwebassets\\build\\favicon.ico"
+    },
+    {
+      "Id": "C:\\Users\\Domagoj\\Documents\\GitHub\\EdunovaWP1\\Csharp\\EdunovaWebAPIMojaAplikacija\\EdunovaWP1\\wwwroot\\build\\index.html",
+      "PackagePath": "staticwebassets\\build\\index.html"
+    },
+    {
+      "Id": "C:\\Users\\Domagoj\\Documents\\GitHub\\EdunovaWP1\\Csharp\\EdunovaWebAPIMojaAplikacija\\EdunovaWP1\\wwwroot\\build\\logo192.png",
+      "PackagePath": "staticwebassets\\build\\logo192.png"
+    },
+    {
+      "Id": "C:\\Users\\Domagoj\\Documents\\GitHub\\EdunovaWP1\\Csharp\\EdunovaWebAPIMojaAplikacija\\EdunovaWP1\\wwwroot\\build\\logo512.png",
+      "PackagePath": "staticwebassets\\build\\logo512.png"
+    },
+    {
+      "Id": "C:\\Users\\Domagoj\\Documents\\GitHub\\EdunovaWP1\\Csharp\\EdunovaWebAPIMojaAplikacija\\EdunovaWP1\\wwwroot\\build\\manifest.json",
+      "PackagePath": "staticwebassets\\build\\manifest.json"
+    },
+    {
+      "Id": "C:\\Users\\Domagoj\\Documents\\GitHub\\EdunovaWP1\\Csharp\\EdunovaWebAPIMojaAplikacija\\EdunovaWP1\\wwwroot\\build\\robots.txt",
+      "PackagePath": "staticwebassets\\build\\robots.txt"
+    },
+    {
+      "Id": "C:\\Users\\Domagoj\\Documents\\GitHub\\EdunovaWP1\\Csharp\\EdunovaWebAPIMojaAplikacija\\EdunovaWP1\\wwwroot\\build\\service-worker.js",
+      "PackagePath": "staticwebassets\\build\\service-worker.js"
+    },
+    {
+      "Id": "C:\\Users\\Domagoj\\Documents\\GitHub\\EdunovaWP1\\Csharp\\EdunovaWebAPIMojaAplikacija\\EdunovaWP1\\wwwroot\\build\\service-worker.js.LICENSE.txt",
+      "PackagePath": "staticwebassets\\build\\service-worker.js.LICENSE.txt"
+    },
+    {
+      "Id": "C:\\Users\\Domagoj\\Documents\\GitHub\\EdunovaWP1\\Csharp\\EdunovaWebAPIMojaAplikacija\\EdunovaWP1\\wwwroot\\build\\service-worker.js.map",
+      "PackagePath": "staticwebassets\\build\\service-worker.js.map"
+    },
+    {
+      "Id": "C:\\Users\\Domagoj\\Documents\\GitHub\\EdunovaWP1\\Csharp\\EdunovaWebAPIMojaAplikacija\\EdunovaWP1\\wwwroot\\build\\static\\css\\main.07afc016.css",
+      "PackagePath": "staticwebassets\\build\\static\\css\\main.07afc016.css"
+    },
+    {
+      "Id": "C:\\Users\\Domagoj\\Documents\\GitHub\\EdunovaWP1\\Csharp\\EdunovaWebAPIMojaAplikacija\\EdunovaWP1\\wwwroot\\build\\static\\css\\main.07afc016.css.map",
+      "PackagePath": "staticwebassets\\build\\static\\css\\main.07afc016.css.map"
+    },
+    {
+      "Id": "C:\\Users\\Domagoj\\Documents\\GitHub\\EdunovaWP1\\Csharp\\EdunovaWebAPIMojaAplikacija\\EdunovaWP1\\wwwroot\\build\\static\\js\\787.2d0ebaa6.chunk.js",
+      "PackagePath": "staticwebassets\\build\\static\\js\\787.2d0ebaa6.chunk.js"
+    },
+    {
+      "Id": "C:\\Users\\Domagoj\\Documents\\GitHub\\EdunovaWP1\\Csharp\\EdunovaWebAPIMojaAplikacija\\EdunovaWP1\\wwwroot\\build\\static\\js\\787.2d0ebaa6.chunk.js.map",
+      "PackagePath": "staticwebassets\\build\\static\\js\\787.2d0ebaa6.chunk.js.map"
+    },
+    {
+      "Id": "C:\\Users\\Domagoj\\Documents\\GitHub\\EdunovaWP1\\Csharp\\EdunovaWebAPIMojaAplikacija\\EdunovaWP1\\wwwroot\\build\\static\\js\\main.acd604a7.js",
+      "PackagePath": "staticwebassets\\build\\static\\js\\main.acd604a7.js"
+    },
+    {
+      "Id": "C:\\Users\\Domagoj\\Documents\\GitHub\\EdunovaWP1\\Csharp\\EdunovaWebAPIMojaAplikacija\\EdunovaWP1\\wwwroot\\build\\static\\js\\main.acd604a7.js.LICENSE.txt",
+      "PackagePath": "staticwebassets\\build\\static\\js\\main.acd604a7.js.LICENSE.txt"
+    },
+    {
+      "Id": "C:\\Users\\Domagoj\\Documents\\GitHub\\EdunovaWP1\\Csharp\\EdunovaWebAPIMojaAplikacija\\EdunovaWP1\\wwwroot\\build\\static\\js\\main.acd604a7.js.map",
+      "PackagePath": "staticwebassets\\build\\static\\js\\main.acd604a7.js.map"
+    },
+    {
+      "Id": "C:\\Users\\Domagoj\\Documents\\GitHub\\EdunovaWP1\\Csharp\\EdunovaWebAPIMojaAplikacija\\EdunovaWP1\\wwwroot\\build\\static\\media\\logo.103b5fa18196d5665a7e12318285c916.svg",
+      "PackagePath": "staticwebassets\\build\\static\\media\\logo.103b5fa18196d5665a7e12318285c916.svg"
+    },
+    {
+      "Id": "C:\\Users\\Domagoj\\Documents\\GitHub\\EdunovaWP1\\Csharp\\EdunovaWebAPIMojaAplikacija\\EdunovaWP1\\wwwroot\\index.html",
+      "PackagePath": "staticwebassets\\index.html"
+    },
+    {
+      "Id": "C:\\Users\\Domagoj\\Documents\\GitHub\\EdunovaWP1\\Csharp\\EdunovaWebAPIMojaAplikacija\\EdunovaWP1\\wwwroot\\package-lock.json",
+      "PackagePath": "staticwebassets\\package-lock.json"
+    },
+    {
+      "Id": "C:\\Users\\Domagoj\\Documents\\GitHub\\EdunovaWP1\\Csharp\\EdunovaWebAPIMojaAplikacija\\EdunovaWP1\\wwwroot\\package.json",
+      "PackagePath": "staticwebassets\\package.json"
+    },
+    {
+      "Id": "C:\\Users\\Domagoj\\Documents\\GitHub\\EdunovaWP1\\Csharp\\EdunovaWebAPIMojaAplikacija\\EdunovaWP1\\wwwroot\\public\\favicon.ico",
+      "PackagePath": "staticwebassets\\public\\favicon.ico"
+    },
+    {
+      "Id": "C:\\Users\\Domagoj\\Documents\\GitHub\\EdunovaWP1\\Csharp\\EdunovaWebAPIMojaAplikacija\\EdunovaWP1\\wwwroot\\public\\index.html",
+      "PackagePath": "staticwebassets\\public\\index.html"
+    },
+    {
+      "Id": "C:\\Users\\Domagoj\\Documents\\GitHub\\EdunovaWP1\\Csharp\\EdunovaWebAPIMojaAplikacija\\EdunovaWP1\\wwwroot\\public\\logo192.jpg",
+      "PackagePath": "staticwebassets\\public\\logo192.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Domagoj\\Documents\\GitHub\\EdunovaWP1\\Csharp\\EdunovaWebAPIMojaAplikacija\\EdunovaWP1\\wwwroot\\public\\logo512.jpg",
+      "PackagePath": "staticwebassets\\public\\logo512.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Domagoj\\Documents\\GitHub\\EdunovaWP1\\Csharp\\EdunovaWebAPIMojaAplikacija\\EdunovaWP1\\wwwroot\\public\\manifest.json",
+      "PackagePath": "staticwebassets\\public\\manifest.json"
+    },
+    {
+      "Id": "C:\\Users\\Domagoj\\Documents\\GitHub\\EdunovaWP1\\Csharp\\EdunovaWebAPIMojaAplikacija\\EdunovaWP1\\wwwroot\\public\\robots.txt",
+      "PackagePath": "staticwebassets\\public\\robots.txt"
+    },
+    {
+      "Id": "C:\\Users\\Domagoj\\Documents\\GitHub\\EdunovaWP1\\Csharp\\EdunovaWebAPIMojaAplikacija\\EdunovaWP1\\wwwroot\\src\\App.css",
+      "PackagePath": "staticwebassets\\src\\App.css"
+    },
+    {
+      "Id": "C:\\Users\\Domagoj\\Documents\\GitHub\\EdunovaWP1\\Csharp\\EdunovaWebAPIMojaAplikacija\\EdunovaWP1\\wwwroot\\src\\App.js",
+      "PackagePath": "staticwebassets\\src\\App.js"
+    },
+    {
+      "Id": "C:\\Users\\Domagoj\\Documents\\GitHub\\EdunovaWP1\\Csharp\\EdunovaWebAPIMojaAplikacija\\EdunovaWP1\\wwwroot\\src\\PotrebneZavisnosti.txt",
+      "PackagePath": "staticwebassets\\src\\PotrebneZavisnosti.txt"
+    },
+    {
+      "Id": "C:\\Users\\Domagoj\\Documents\\GitHub\\EdunovaWP1\\Csharp\\EdunovaWebAPIMojaAplikacija\\EdunovaWP1\\wwwroot\\src\\components\\edunova-pwa.code-workspace",
+      "PackagePath": "staticwebassets\\src\\components\\edunova-pwa.code-workspace"
+    },
+    {
+      "Id": "C:\\Users\\Domagoj\\Documents\\GitHub\\EdunovaWP1\\Csharp\\EdunovaWebAPIMojaAplikacija\\EdunovaWP1\\wwwroot\\src\\components\\izbornik.component.js",
+      "PackagePath": "staticwebassets\\src\\components\\izbornik.component.js"
+    },
+    {
+      "Id": "C:\\Users\\Domagoj\\Documents\\GitHub\\EdunovaWP1\\Csharp\\EdunovaWebAPIMojaAplikacija\\EdunovaWP1\\wwwroot\\src\\components\\nadzornaploca.component.js",
+      "PackagePath": "staticwebassets\\src\\components\\nadzornaploca.component.js"
+    },
+    {
+      "Id": "C:\\Users\\Domagoj\\Documents\\GitHub\\EdunovaWP1\\Csharp\\EdunovaWebAPIMojaAplikacija\\EdunovaWP1\\wwwroot\\src\\components\\osoba\\osobe.component.js",
+      "PackagePath": "staticwebassets\\src\\components\\osoba\\osobe.component.js"
+    },
+    {
+      "Id": "C:\\Users\\Domagoj\\Documents\\GitHub\\EdunovaWP1\\Csharp\\EdunovaWebAPIMojaAplikacija\\EdunovaWP1\\wwwroot\\src\\components\\pocetna.component.js",
+      "PackagePath": "staticwebassets\\src\\components\\pocetna.component.js"
+    },
+    {
+      "Id": "C:\\Users\\Domagoj\\Documents\\GitHub\\EdunovaWP1\\Csharp\\EdunovaWebAPIMojaAplikacija\\EdunovaWP1\\wwwroot\\src\\index.css",
+      "PackagePath": "staticwebassets\\src\\index.css"
+    },
+    {
+      "Id": "C:\\Users\\Domagoj\\Documents\\GitHub\\EdunovaWP1\\Csharp\\EdunovaWebAPIMojaAplikacija\\EdunovaWP1\\wwwroot\\src\\index.js",
+      "PackagePath": "staticwebassets\\src\\index.js"
+    },
+    {
+      "Id": "C:\\Users\\Domagoj\\Documents\\GitHub\\EdunovaWP1\\Csharp\\EdunovaWebAPIMojaAplikacija\\EdunovaWP1\\wwwroot\\src\\logo.svg",
+      "PackagePath": "staticwebassets\\src\\logo.svg"
+    },
+    {
+      "Id": "C:\\Users\\Domagoj\\Documents\\GitHub\\EdunovaWP1\\Csharp\\EdunovaWebAPIMojaAplikacija\\EdunovaWP1\\wwwroot\\src\\reportWebVitals.js",
+      "PackagePath": "staticwebassets\\src\\reportWebVitals.js"
+    },
+    {
+      "Id": "C:\\Users\\Domagoj\\Documents\\GitHub\\EdunovaWP1\\Csharp\\EdunovaWebAPIMojaAplikacija\\EdunovaWP1\\wwwroot\\src\\service-worker.js",
+      "PackagePath": "staticwebassets\\src\\service-worker.js"
+    },
+    {
+      "Id": "C:\\Users\\Domagoj\\Documents\\GitHub\\EdunovaWP1\\Csharp\\EdunovaWebAPIMojaAplikacija\\EdunovaWP1\\wwwroot\\src\\serviceWorkerRegistration.js",
+      "PackagePath": "staticwebassets\\src\\serviceWorkerRegistration.js"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.EdunovaWP1.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.build.EdunovaWP1.props",
+      "PackagePath": "build\\EdunovaWP1.props"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.buildMultiTargeting.EdunovaWP1.props",
+      "PackagePath": "buildMultiTargeting\\EdunovaWP1.props"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.buildTransitive.EdunovaWP1.props",
+      "PackagePath": "buildTransitive\\EdunovaWP1.props"
+    }
+  ],
+  "ElementsToRemove": []
+}
