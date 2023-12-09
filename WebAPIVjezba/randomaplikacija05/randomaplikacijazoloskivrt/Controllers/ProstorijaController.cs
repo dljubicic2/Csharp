@@ -9,11 +9,11 @@ namespace randomaplikacijazoloskivrt.Controllers
     [ApiController]
     [Route("api/v1/[controller]")]
  
-    public class DjelatnikController : ControllerBase
+    public class ProstorijaController : ControllerBase
     {
         private readonly EdunovaContext _context;
 
-        public DjelatnikController(EdunovaContext context)
+        public ProstorijaController(EdunovaContext context)
         {
             _context = context;
         }
@@ -28,13 +28,13 @@ namespace randomaplikacijazoloskivrt.Controllers
 
             try
             {
-                var djelatnici = _context.Djelatnik.ToList();
-                if(djelatnici == null || djelatnici.Count == 0)
+                var prostorije = _context.Prostorija.ToList();
+                if(prostorije == null || prostorije.Count == 0)
                 {
                     return new EmptyResult();
                 }
 
-                return new JsonResult(_context.Djelatnik.ToList());
+                return new JsonResult(_context.Prostorija.ToList());
             }
             catch (Exception ex)
             {
@@ -44,7 +44,7 @@ namespace randomaplikacijazoloskivrt.Controllers
         }
 
         [HttpPost]
-        public IActionResult Post(Djelatnik djelatnik)
+        public IActionResult Post(Prostorija prostorija)
         {
             if (!ModelState.IsValid)
             {
@@ -53,10 +53,10 @@ namespace randomaplikacijazoloskivrt.Controllers
 
             try
             {
-                _context.Djelatnik.Add(djelatnik);
+                _context.Prostorija.Add(prostorija);
                 _context.SaveChanges();
 
-                return StatusCode(StatusCodes.Status201Created, djelatnik);
+                return StatusCode(StatusCodes.Status201Created, prostorija);
             }
             catch (Exception ex)
             {
@@ -67,31 +67,31 @@ namespace randomaplikacijazoloskivrt.Controllers
 
         [HttpPut]
         [Route("{sifra:int}")]
-        public IActionResult Put(int sifra, Djelatnik djelatnik)
+        public IActionResult Put(int sifra, Prostorija prostorija)
         {
-            if(sifra <= 0 || djelatnik == null)
+            if(sifra <= 0 || prostorija == null)
             {
                 return BadRequest();
             }
 
             try
             {
-                var djelatnikBaza = _context.Djelatnik.Find(sifra);
-                if(djelatnikBaza == null)
+                var prostorijaBaza = _context.Prostorija.Find(sifra);
+                if(prostorijaBaza == null)
                 {
                     return BadRequest();
                 }
 
                 // Unošenje podataka
 
-                djelatnikBaza.Ime = djelatnik.Ime;
-                djelatnikBaza.Prezime = djelatnik.Prezime;
-                djelatnikBaza.Oib = djelatnik.Oib;
+                prostorijaBaza.Dimenzije = prostorija.Dimenzije;
+                prostorijaBaza.MaksBroj = prostorija.MaksBroj;
+                prostorijaBaza.Mjesto = prostorija.Mjesto;
 
-                _context.Djelatnik.Update(djelatnikBaza);
+                _context.Prostorija.Update(prostorijaBaza);
                 _context.SaveChanges();
 
-                return StatusCode(StatusCodes.Status200OK, djelatnikBaza);
+                return StatusCode(StatusCodes.Status200OK, prostorijaBaza);
             }
             catch (Exception ex)
             {
@@ -109,15 +109,15 @@ namespace randomaplikacijazoloskivrt.Controllers
                 return BadRequest();
             }
 
-            var djelatnikBaza = _context.Djelatnik.Find(sifra);
-            if(djelatnikBaza == null)
+            var prostorijaBaza = _context.Prostorija.Find(sifra);
+            if(prostorijaBaza == null)
             {
                 return BadRequest();
             }
             
             try
             {
-                _context.Remove(djelatnikBaza);
+                _context.Remove(prostorijaBaza);
                 _context.SaveChanges();
 
                 return new JsonResult("{\"poruka\":\"Obrisano\"}");

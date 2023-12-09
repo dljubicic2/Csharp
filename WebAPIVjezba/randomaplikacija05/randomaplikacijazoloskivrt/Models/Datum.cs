@@ -1,9 +1,14 @@
-﻿using System.Reflection.Metadata.Ecma335;
+﻿using System.ComponentModel.DataAnnotations.Schema;
+using System.Reflection.Metadata.Ecma335;
+using Microsoft.EntityFrameworkCore;
 
 namespace randomaplikacijazoloskivrt.Models
 {
-    public class Datum
+    [Keyless]
+    [NotMapped]
+    public class Datum 
     {
+        
         public DateTime DatumRodenja { get; set; }
         public DateTime DatumDolaska { get; set; }
         public DateTime DatumSmrti { get; set; }
