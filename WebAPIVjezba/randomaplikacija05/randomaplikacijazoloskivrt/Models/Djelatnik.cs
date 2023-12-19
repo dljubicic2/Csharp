@@ -6,7 +6,9 @@
         public string? Prezime { get; set;}
         public string? Oib { get; set; }
 
-
-        public ICollection<Zivotinja> Zivotinje { get; } = new List<Zivotinja>();
+        public static implicit operator string(Djelatnik v)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

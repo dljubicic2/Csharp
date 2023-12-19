@@ -14,19 +14,12 @@ namespace randomaplikacijazoloskivrt.Data
 
         public DbSet<Djelatnik> Djelatnik { get; set; }
         public DbSet<Prostorija> Prostorija { get; set; }
-
         public DbSet<Zivotinja> Zivotinja { get; set; }
+        
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<Zivotinja>()
-                .HasMany(z => z.Djelatnici)
-                .WithMany(d => d.Zivotinje)
-                .UsingEntity<Dictionary<string, object>>("datum",
-                da => da.HasOne<Djelatnik>().WithMany().HasForeignKey("djelatnik"),
-                da => da.HasOne<Zivotinja>().WithMany().HasForeignKey("zivotinja"),
-                da => da.ToTable("datum")
-                );
+            modelBuilder.Entity<Zivotinja>().HasOne(d => d.Djelatnik);
 
             modelBuilder.Entity<Zivotinja>()
                 .HasMany(z => z.Prostorije)
@@ -37,7 +30,7 @@ namespace randomaplikacijazoloskivrt.Data
                 da => da.ToTable("datum")
                 );
 
-            modelBuilder.Entity<Zivotinja>().HasOne(z => z.Datum);
+            
         }
     }
 

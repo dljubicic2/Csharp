@@ -7,11 +7,14 @@ namespace randomaplikacijazoloskivrt.Models
     {
         public string? Vrsta { get; set; }
         public string? Naziv { get; set; }
-        public List<Djelatnik> Djelatnici { get; set; }
-        public List<Prostorija> Prostorije { get; set; }
+
+        [ForeignKey("djelatnik")]
+        public Djelatnik? Djelatnik { get; set; }
+
+        public List<Prostorija> Prostorije { get; set; } = new();
 
         
-        public Datum? Datum { get; set; }
+        
 
     }
 }
