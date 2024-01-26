@@ -43,6 +43,33 @@ namespace randomaplikacijazoloskivrt.Controllers
             }
         }
 
+        [HttpGet]
+        [Route("{sifra:int}")]
+        public IActionResult GetBySifra(int sifra)
+        {
+            if (sifra <= 1)
+            {
+                return BadRequest(ModelState);
+            }
+
+            try
+            {
+                var d = _context.Djelatnik.Find(sifra);
+
+                if(d == null)
+                {
+                    return StatusCode(StatusCodes.Status204NoContent, d);
+                }
+
+                return new JsonResult(d);
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(StatusCodes.Status503ServiceUnavailable, ex.Message);
+                
+            } 
+        }
+
         [HttpPost]
         public IActionResult Post(Djelatnik djelatnik)
         {

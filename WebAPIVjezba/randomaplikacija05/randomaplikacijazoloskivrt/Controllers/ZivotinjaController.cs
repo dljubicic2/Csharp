@@ -43,6 +43,33 @@ namespace randomaplikacijazoloskivrt.Controllers
             }
         }
 
+        [HttpGet]
+        [Route("{sifra:int}")]
+        public IActionResult GetBySifra(int sifra)
+        {
+            if(sifra <= 1)
+            {
+                return BadRequest(ModelState);
+            }
+
+            try
+            {
+                var z = _context.Zivotinja.Find(sifra);
+
+                if(z == null)
+                {
+                    return StatusCode(StatusCodes.Status204NoContent, z);
+                }
+
+                return new JsonResult(z);
+            }
+            catch (Exception ex)
+            {
+
+                return StatusCode(StatusCodes.Status503ServiceUnavailable, ex.Message);
+            }
+        }
+
         [HttpPost]
        public IActionResult Post(ZivotinjaDTO zivotinjaDTO)
         
@@ -66,18 +93,7 @@ namespace randomaplikacijazoloskivrt.Controllers
                     return BadRequest(ModelState);
                 }
 
-                Zivotinja z = new()
-                {
-                    Vrsta = zivotinjaDTO.Vrsta,
-                    Naziv = zivotinjaDTO.Naziv,
-                    Djelatnik = djelatnik
-                };
-
-                _context.Zivotinja.Add(z);
-                _context.SaveChanges();
-
-                zivotinjaDTO.Sifra = z.Sifra;
-                zivotinjaDTO.Djelatnik = djelatnik.Ime;
+            
 
                 return Ok(zivotinjaDTO);
                
